@@ -15,6 +15,12 @@ class FeaturesAViewController: UIViewController {
     }
     
     @IBAction func onMoveToBClicked(_ sender: UIButton) {
+        navigateToFeaturesB()
+    }
+}
+
+extension FeaturesAViewController {
+    func navigateToFeaturesB() {
         let vc = FeaturesBViewController()
         vc.modalPresentationStyle = .overFullScreen
         vc.modalTransitionStyle = .crossDissolve
