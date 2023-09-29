@@ -74,7 +74,6 @@ This is how to run the application locally using your XCode:
 ### Prerequisites
 * MacBook required
 * XCode (recommend using latest version or 15.0)
-* Fre
 
 ### Installation
 1. Clone the repository
