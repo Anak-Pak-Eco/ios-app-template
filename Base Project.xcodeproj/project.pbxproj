@@ -88,6 +88,7 @@
 		D6D0105F2AC6E1C900EC51FB /* TitleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleListViewController.swift; sourceTree = "<group>"; };
 		D6D010612AC6E1EB00EC51FB /* TitleListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleListViewController.xib; sourceTree = "<group>"; };
 		D6E50C102ACD594B00375F9A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D6E50C1D2ACD60DF00375F9A /* Base Project.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Base Project.entitlements"; sourceTree = "<group>"; };
 		D6FC19AA2AC96F840040E681 /* PoetryDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoetryDetailViewModel.swift; sourceTree = "<group>"; };
 		D6FC19AC2AC96FE20040E681 /* PoetryDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoetryDetailResponse.swift; sourceTree = "<group>"; };
 		D6FC19AE2AC970A40040E681 /* PoetryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoetryModel.swift; sourceTree = "<group>"; };
@@ -230,6 +231,7 @@
 		D6D010232AC6C60800EC51FB /* Base Project */ = {
 			isa = PBXGroup;
 			children = (
+				D6E50C1D2ACD60DF00375F9A /* Base Project.entitlements */,
 				D640E1E92AC730F2007E993F /* Data */,
 				D640E1EA2AC730F6007E993F /* Domain */,
 				D6D010572AC6DB6000EC51FB /* Bootstrap */,
@@ -680,6 +682,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Base Project/Base Project.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 47BZXPDJKC;
@@ -709,6 +712,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Base Project/Base Project.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 47BZXPDJKC;
