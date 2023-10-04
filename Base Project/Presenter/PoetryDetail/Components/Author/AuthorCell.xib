@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AuthorCell" rowHeight="85" id="bif-0d-aKj" customClass="AuthorCell" customModule="Base_Project" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="521" height="85"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bif-0d-aKj" id="lCB-Bl-SHt" customClass="AuthorCell" customModule="Base_Project" customModuleProvider="target">
+                <rect key="frame" x="0.0" y="0.0" width="521" height="85"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="SyC-pN-4vC">
+                        <rect key="frame" x="0.0" y="0.0" width="521" height="85"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Poem by : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RKn-Ru-w0J">
+                                <rect key="frame" x="0.0" y="0.0" width="521" height="20.333333333333332"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vs3-2S-U32">
+                                <rect key="frame" x="0.0" y="34.333333333333343" width="521" height="50.666666666666657"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="SyC-pN-4vC" secondAttribute="bottom" id="C28-0t-zVM"/>
+                    <constraint firstItem="SyC-pN-4vC" firstAttribute="top" secondItem="lCB-Bl-SHt" secondAttribute="top" id="KpD-hw-OTd"/>
+                    <constraint firstItem="SyC-pN-4vC" firstAttribute="leading" secondItem="lCB-Bl-SHt" secondAttribute="leading" id="PGl-zk-UAr"/>
+                    <constraint firstAttribute="trailing" secondItem="SyC-pN-4vC" secondAttribute="trailing" id="qyY-8m-Sfo"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="-293.89312977099235" y="-60.91549295774648"/>
+        </tableViewCell>
+    </objects>
+</document>
