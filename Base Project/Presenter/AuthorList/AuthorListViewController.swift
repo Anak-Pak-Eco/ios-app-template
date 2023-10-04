@@ -7,7 +7,6 @@
 
 import Foundation
 import UIKit
-import FirebaseMessaging
 
 class AuthorListViewController: UIViewController {
     
@@ -21,9 +20,6 @@ class AuthorListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
-        UNUserNotificationCenter.current().requestAuthorization(
-            options: authOptions) { _, _ in }
         initUI()
         observe()
         viewModel.initData()
