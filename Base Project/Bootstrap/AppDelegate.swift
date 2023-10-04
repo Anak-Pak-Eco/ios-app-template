@@ -7,9 +7,10 @@
 
 import UIKit
 import FirebaseCore
+import FirebaseMessaging
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
     func application(
         _ application: UIApplication,
@@ -36,5 +37,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     ) {
         
     }
+    
+    func application(
+        _ application: UIApplication,
+        didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data
+    ) {
+        UNUserNotificationCenter.current().delegate = self
+        
+        let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+        UNUserNotificationCenter.current().requestAuthorization(
+            options: authOptions) { _, _ in }
+        
+        application.registerForRemoteNotifications()
+    }
+    
+    func userNotificationCenter(
+        _ center: UNUserNotificationCenter,
+        willPresent notification: UNNotification
+    ) async -> UNNotificationPresentationOptions {
+        let userInfo = notification.request.content.userInfo
+        print(userInfo)
+        return [[.sound, .badge, .banner]]
+    }
 }
-
