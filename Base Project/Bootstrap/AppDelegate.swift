@@ -43,11 +43,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data
     ) {
         UNUserNotificationCenter.current().delegate = self
-        
-        let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
-        UNUserNotificationCenter.current().requestAuthorization(
-            options: authOptions) { _, _ in }
-        
         application.registerForRemoteNotifications()
     }
     
@@ -58,5 +53,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         let userInfo = notification.request.content.userInfo
         print(userInfo)
         return [[.sound, .badge, .banner]]
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse) async {
+        print(response.notification.request.content)
     }
 }
