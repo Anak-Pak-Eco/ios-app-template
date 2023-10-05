@@ -18,6 +18,8 @@
 		D640E2042AC7B490007E993F /* TitleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D640E2032AC7B490007E993F /* TitleResponse.swift */; };
 		D640E2062AC86963007E993F /* TitleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D640E2052AC86963007E993F /* TitleModel.swift */; };
 		D640E2082AC86AEB007E993F /* TitleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D640E2072AC86AEB007E993F /* TitleListViewModel.swift */; };
+		D68756FA2ACEB7F600401FF5 /* PoetryLineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68756F82ACEB7F600401FF5 /* PoetryLineTableViewCell.swift */; };
+		D68756FB2ACEB7F600401FF5 /* PoetryLineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D68756F92ACEB7F600401FF5 /* PoetryLineTableViewCell.xib */; };
 		D6D010252AC6C60800EC51FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D010242AC6C60800EC51FB /* AppDelegate.swift */; };
 		D6D010272AC6C60800EC51FB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D010262AC6C60800EC51FB /* SceneDelegate.swift */; };
 		D6D0102E2AC6C60900EC51FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6D0102D2AC6C60900EC51FB /* Assets.xcassets */; };
@@ -72,6 +74,8 @@
 		D640E2032AC7B490007E993F /* TitleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleResponse.swift; sourceTree = "<group>"; };
 		D640E2052AC86963007E993F /* TitleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleModel.swift; sourceTree = "<group>"; };
 		D640E2072AC86AEB007E993F /* TitleListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleListViewModel.swift; sourceTree = "<group>"; };
+		D68756F82ACEB7F600401FF5 /* PoetryLineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoetryLineTableViewCell.swift; sourceTree = "<group>"; };
+		D68756F92ACEB7F600401FF5 /* PoetryLineTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PoetryLineTableViewCell.xib; sourceTree = "<group>"; };
 		D6D010212AC6C60800EC51FB /* Base Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Base Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6D010242AC6C60800EC51FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6D010262AC6C60800EC51FB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -341,6 +345,8 @@
 		D6FC19B62AC9751E0040E681 /* PoetryLine */ = {
 			isa = PBXGroup;
 			children = (
+				D68756F82ACEB7F600401FF5 /* PoetryLineTableViewCell.swift */,
+				D68756F92ACEB7F600401FF5 /* PoetryLineTableViewCell.xib */,
 			);
 			path = PoetryLine;
 			sourceTree = "<group>";
@@ -463,6 +469,7 @@
 			files = (
 				D6D010622AC6E1EB00EC51FB /* TitleListViewController.xib in Resources */,
 				D6D010312AC6C60900EC51FB /* LaunchScreen.storyboard in Resources */,
+				D68756FB2ACEB7F600401FF5 /* PoetryLineTableViewCell.xib in Resources */,
 				D6FC19B82AC975810040E681 /* AuthorCell.xib in Resources */,
 				D6D0105B2AC6DF4E00EC51FB /* AuthorListViewController.xib in Resources */,
 				D6FC19B12AC972F20040E681 /* PoetryDetailViewController.xib in Resources */,
@@ -502,6 +509,7 @@
 				D640E1F42AC7383E007E993F /* ApiService.swift in Sources */,
 				D640E2022AC7A32D007E993F /* Box.swift in Sources */,
 				D6FC19B32AC973050040E681 /* PoetryDetailViewController.swift in Sources */,
+				D68756FA2ACEB7F600401FF5 /* PoetryLineTableViewCell.swift in Sources */,
 				D640E1F92AC73ADA007E993F /* PoetryProtocol.swift in Sources */,
 				D640E2042AC7B490007E993F /* TitleResponse.swift in Sources */,
 				D6FC19AD2AC96FE20040E681 /* PoetryDetailResponse.swift in Sources */,

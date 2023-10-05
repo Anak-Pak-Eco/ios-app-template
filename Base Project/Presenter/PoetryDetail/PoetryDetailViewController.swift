@@ -12,6 +12,8 @@ class PoetryDetailViewController: UIViewController {
     
     @IBOutlet weak var mainTableView: UITableView!
     
+    private let viewModel = PoetryDetailViewModel()
+    
     let author: String
     let poetryTitle: String
     
@@ -28,6 +30,8 @@ class PoetryDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initUI()
+        observe()
+        viewModel.initData(author: author, title: poetryTitle)
     }
     
     private func initUI() {
@@ -35,13 +39,28 @@ class PoetryDetailViewController: UIViewController {
             UINib(nibName: "AuthorCell", bundle: nil), 
             forCellReuseIdentifier: "AuthorCell"
         )
+        mainTableView.register(
+            UINib(nibName: "PoetryLineTableViewCell", bundle: nil),
+            forCellReuseIdentifier: "PoetryLineTableViewCell"
+        )
         mainTableView.dataSource = self
         mainTableView.delegate = self
-        mainTableView.rowHeight = UITableView.automaticDimension
-        mainTableView.estimatedRowHeight = 80
         mainTableView.separatorStyle = .none
-        mainTableView.estimatedRowHeight = UITableView.automaticDimension
+        mainTableView.rowHeight = UITableView.automaticDimension
+        mainTableView.estimatedRowHeight = 80.0
+        mainTableView.selectionFollowsFocus = false
+        mainTableView.allowsSelection = false
         mainTableView.reloadData()
+    }
+    
+    private func observe() {
+        viewModel.poetries.bind { poetries in
+            if !poetries.isEmpty {
+                if !poetries[0].lines.isEmpty {
+                    self.mainTableView.reloadData()
+                }
+            }
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -55,19 +74,26 @@ extension PoetryDetailViewController: UITableViewDataSource, UITableViewDelegate
         _ tableView: UITableView,
         numberOfRowsInSection section: Int
     ) -> Int {
-        return 1
+        if viewModel.poetries.value.isEmpty {
+            1
+        } else {
+            viewModel.poetries.value[0].lines.count + 1
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let authorCell = tableView.dequeueReusableCell(withIdentifier: "AuthorCell", for: indexPath) as! AuthorCell
-        return authorCell
+        if indexPath.row == 0 {
+            let authorCell = tableView.dequeueReusableCell(withIdentifier: "AuthorCell", for: indexPath) as! AuthorCell
+            authorCell.setAuthorLabel(author: author)
+            return authorCell
+        } else {
+            let poetryLineCell = tableView.dequeueReusableCell(withIdentifier: "PoetryLineTableViewCell", for: indexPath) as! PoetryLineTableViewCell
+            poetryLineCell.setPoetryLine(viewModel.poetries.value[0].lines[indexPath.row - 1])
+            return poetryLineCell
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
-    
-//    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return UITableView.automaticDimension
-//    }
 }

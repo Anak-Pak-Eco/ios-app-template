@@ -10,9 +10,9 @@ import UIKit
 
 class AuthorCell: UITableViewCell {
     
-    let title: String? = nil
+    @IBOutlet private weak var authorTitleLabel: UILabel!
     
-    override class func awakeFromNib() {
-        print("Awaken from NIB")
+    func setAuthorLabel(author: String) {
+        authorTitleLabel.text = "A poem by \(author)"
     }
 }
