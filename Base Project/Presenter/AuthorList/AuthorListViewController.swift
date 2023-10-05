@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SwiftUI
 import FirebaseMessaging
 
 class AuthorListViewController: UIViewController {
@@ -64,7 +65,8 @@ class AuthorListViewController: UIViewController {
 
 extension AuthorListViewController {
     func navigateToTitleList(author: String) {
-        let vc = TitleListViewController(author: author)
+//        let vc = TitleListViewController(author: author)
+        let vc = UIHostingController(rootView: TestFirebaseView())
         vc.modalPresentationStyle = .overFullScreen
         vc.modalTransitionStyle = .crossDissolve
         vc.title = author

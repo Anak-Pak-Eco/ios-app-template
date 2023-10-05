@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A7F015FC2ACEB0C1000B47F7 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F015FB2ACEB0C1000B47F7 /* DataModel.swift */; };
+		A7F016022ACEB26C000B47F7 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A7F016012ACEB26C000B47F7 /* FirebaseDatabaseSwift */; };
+		A7F016072ACEB61F000B47F7 /* TestFirebaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F016062ACEB61F000B47F7 /* TestFirebaseViewController.swift */; };
+		A7F016092ACEB64F000B47F7 /* TestFirebaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7F016082ACEB64F000B47F7 /* TestFirebaseViewController.xib */; };
+		A7F0160D2ACEBA26000B47F7 /* TestFirebaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F0160C2ACEBA26000B47F7 /* TestFirebaseView.swift */; };
+		A7F0160F2ACEBA37000B47F7 /* TestFirebaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F0160E2ACEBA37000B47F7 /* TestFirebaseViewModel.swift */; };
 		D640E1F22AC73809007E993F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D640E1F12AC73809007E993F /* Alamofire */; };
 		D640E1F42AC7383E007E993F /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D640E1F32AC7383E007E993F /* ApiService.swift */; };
 		D640E1F72AC73885007E993F /* AuthorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D640E1F62AC73885007E993F /* AuthorResponse.swift */; };
@@ -62,6 +68,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A7F015FB2ACEB0C1000B47F7 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		A7F016062ACEB61F000B47F7 /* TestFirebaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFirebaseViewController.swift; sourceTree = "<group>"; };
+		A7F016082ACEB64F000B47F7 /* TestFirebaseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestFirebaseViewController.xib; sourceTree = "<group>"; };
+		A7F0160C2ACEBA26000B47F7 /* TestFirebaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFirebaseView.swift; sourceTree = "<group>"; };
+		A7F0160E2ACEBA37000B47F7 /* TestFirebaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFirebaseViewModel.swift; sourceTree = "<group>"; };
 		D640E1F32AC7383E007E993F /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		D640E1F62AC73885007E993F /* AuthorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorResponse.swift; sourceTree = "<group>"; };
 		D640E1F82AC73ADA007E993F /* PoetryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoetryProtocol.swift; sourceTree = "<group>"; };
@@ -103,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7F016022ACEB26C000B47F7 /* FirebaseDatabaseSwift in Frameworks */,
 				D6E50C1C2ACD59CF00375F9A /* FirebaseMessaging in Frameworks */,
 				D6E50C1A2ACD59CF00375F9A /* FirebaseDatabase in Frameworks */,
 				D6E50C162ACD59CF00375F9A /* FirebaseAnalyticsSwift in Frameworks */,
@@ -129,6 +141,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A7F016002ACEB26C000B47F7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A7F016032ACEB567000B47F7 /* TestViewFirebase */ = {
+			isa = PBXGroup;
+			children = (
+				A7F016062ACEB61F000B47F7 /* TestFirebaseViewController.swift */,
+				A7F016082ACEB64F000B47F7 /* TestFirebaseViewController.xib */,
+				A7F0160C2ACEBA26000B47F7 /* TestFirebaseView.swift */,
+				A7F0160E2ACEBA37000B47F7 /* TestFirebaseViewModel.swift */,
+			);
+			path = TestViewFirebase;
+			sourceTree = "<group>";
+		};
 		D640E1E92AC730F2007E993F /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +208,7 @@
 				D640E1FA2AC73B12007E993F /* AuthorModel.swift */,
 				D640E2052AC86963007E993F /* TitleModel.swift */,
 				D6FC19AE2AC970A40040E681 /* PoetryModel.swift */,
+				A7F015FB2ACEB0C1000B47F7 /* DataModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -215,6 +246,7 @@
 				D6D0103A2AC6C60900EC51FB /* Base ProjectTests */,
 				D6D010442AC6C60900EC51FB /* Base ProjectUITests */,
 				D6D010222AC6C60800EC51FB /* Products */,
+				A7F016002ACEB26C000B47F7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -262,6 +294,7 @@
 		D6D010562AC6DB5000EC51FB /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				A7F016032ACEB567000B47F7 /* TestViewFirebase */,
 				D6FC19A92AC96DF40040E681 /* PoetryDetail */,
 				D6D0105E2AC6E1B100EC51FB /* TitleList */,
 				D6D010592AC6DF3400EC51FB /* AuthorList */,
@@ -368,6 +401,7 @@
 				D6E50C172ACD59CF00375F9A /* FirebaseAuth */,
 				D6E50C192ACD59CF00375F9A /* FirebaseDatabase */,
 				D6E50C1B2ACD59CF00375F9A /* FirebaseMessaging */,
+				A7F016012ACEB26C000B47F7 /* FirebaseDatabaseSwift */,
 			);
 			productName = "Base Project";
 			productReference = D6D010212AC6C60800EC51FB /* Base Project.app */;
@@ -468,6 +502,7 @@
 				D6FC19B12AC972F20040E681 /* PoetryDetailViewController.xib in Resources */,
 				D6D0102E2AC6C60900EC51FB /* Assets.xcassets in Resources */,
 				D6E50C112ACD594B00375F9A /* GoogleService-Info.plist in Resources */,
+				A7F016092ACEB64F000B47F7 /* TestFirebaseViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,8 +530,10 @@
 				D6FC19BA2AC9761C0040E681 /* AuthorCell.swift in Sources */,
 				D640E2082AC86AEB007E993F /* TitleListViewModel.swift in Sources */,
 				D640E1FD2AC73B2D007E993F /* PoetryRepository.swift in Sources */,
+				A7F0160F2ACEBA37000B47F7 /* TestFirebaseViewModel.swift in Sources */,
 				D640E1FF2AC7A2F8007E993F /* AuthorListViewModel.swift in Sources */,
 				D640E1FB2AC73B12007E993F /* AuthorModel.swift in Sources */,
+				A7F015FC2ACEB0C1000B47F7 /* DataModel.swift in Sources */,
 				D6FC19AB2AC96F840040E681 /* PoetryDetailViewModel.swift in Sources */,
 				D6D010602AC6E1C900EC51FB /* TitleListViewController.swift in Sources */,
 				D640E1F42AC7383E007E993F /* ApiService.swift in Sources */,
@@ -505,11 +542,13 @@
 				D640E1F92AC73ADA007E993F /* PoetryProtocol.swift in Sources */,
 				D640E2042AC7B490007E993F /* TitleResponse.swift in Sources */,
 				D6FC19AD2AC96FE20040E681 /* PoetryDetailResponse.swift in Sources */,
+				A7F016072ACEB61F000B47F7 /* TestFirebaseViewController.swift in Sources */,
 				D6FC19AF2AC970A40040E681 /* PoetryModel.swift in Sources */,
 				D6D010252AC6C60800EC51FB /* AppDelegate.swift in Sources */,
 				D6D0105D2AC6DF5D00EC51FB /* AuthorListViewController.swift in Sources */,
 				D6D010272AC6C60800EC51FB /* SceneDelegate.swift in Sources */,
 				D640E1F72AC73885007E993F /* AuthorResponse.swift in Sources */,
+				A7F0160D2ACEBA26000B47F7 /* TestFirebaseView.swift in Sources */,
 				D640E2062AC86963007E993F /* TitleModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -874,6 +913,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		A7F016012ACEB26C000B47F7 /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D6E50C122ACD59CF00375F9A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
+		};
 		D640E1F12AC73809007E993F /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D640E1F02AC73809007E993F /* XCRemoteSwiftPackageReference "Alamofire" */;
