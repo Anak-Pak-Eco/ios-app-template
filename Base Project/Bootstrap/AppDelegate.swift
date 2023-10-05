@@ -18,6 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
+        FirebaseApp.configure()
+        
         Messaging.messaging().delegate = self
         UNUserNotificationCenter.current().delegate = self
         
@@ -26,7 +28,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         application.registerForRemoteNotifications()
         
-        FirebaseApp.configure()
         return true
     }
 
@@ -46,6 +47,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         didDiscardSceneSessions sceneSessions: Set<UISceneSession>
     ) {
         
+    }
+    
+    func application(
+        _ application: UIApplication,
+        didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data
+    ) {
+        Messaging.messaging().apnsToken = deviceToken
+        Messaging.messaging().subscribe(toTopic: "device_alert") { error in
+            if let error = error {
+                print("Error subscribing topic: \(error.localizedDescription)")
+            } else {
+                print("Success subscribing topic")
+            }
+        }
     }
     
     func userNotificationCenter(
