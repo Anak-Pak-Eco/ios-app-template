@@ -7,10 +7,30 @@
 
 import Foundation
 
-class DataModel: Encodable, Decodable {
-    var current_TDS: Float = 0.0
-    var current_pH: Float = 0.0
-//    var value: String = ""
+struct DataModel: Codable {
+    var devices: [String: Device]
+}
+
+struct Device: Codable {
+    
+    var current_ph: Double
+    var current_steps: String
+    var current_tds: Double
+    var name: String
+    var plant_id: String
+    var user_id: String
+    
+    func toDictionary() -> [String: Any] {
+            return [
+                "current_ph": current_ph,
+                "current_steps": current_steps,
+                "current_tds": current_tds,
+                "name": name,
+                "plant_id": plant_id,
+                "user_id": user_id
+            ]
+        }
+    
 }
 
 extension Encodable {
